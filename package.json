@@ -1,0 +1,18 @@
+{
+  "name": "models",
+  "version": "1.0.0",
+  "description": "Private credentials and state for hydl — Hunyuan 3D asset downloads",
+  "private": true,
+  "scripts": {
+    "download": "SKIP_CONVERT=1 node node_modules/hydl/downloader.js",
+    "convert": "node convert.js",
+    "sync": "bun run download && bun run convert",
+    "prompt": "bun x --package hydl hydl-prompt",
+    "list": "node -e \"fetch('https://raw.githubusercontent.com/AnEntrypoint/assets/master/docs/manifest.json').then(r=>r.json()).then(d=>Object.values(d).flat().forEach(m=>console.log(m.name)))\"",
+    "auth": "bun x --package hydl hydl",
+    "batch": "node batch-prompt.js"
+  },
+  "dependencies": {
+    "hydl": "^1.0.3"
+  }
+}
