@@ -9,7 +9,7 @@
     "sync": "bun run download && bun run convert",
     "prompt": "bun x --package hydl hydl-prompt",
     "list": "node -e \"fetch('https://raw.githubusercontent.com/AnEntrypoint/assets/master/docs/manifest.json').then(r=>r.json()).then(d=>Object.values(d).flat().forEach(m=>console.log(m.name)))\"",
-    "auth": "bun x --package hydl hydl",
+    "auth": "node_modules/.bin/hydl.exe",
     "batch": "node batch-prompt.js",
     "ui": "node serve.js"
   },
