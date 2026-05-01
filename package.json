@@ -10,9 +10,14 @@
     "prompt": "bun x --package hydl hydl-prompt",
     "list": "node -e \"fetch('https://raw.githubusercontent.com/AnEntrypoint/assets/master/docs/manifest.json').then(r=>r.json()).then(d=>Object.values(d).flat().forEach(m=>console.log(m.name)))\"",
     "auth": "bun x --package hydl hydl",
-    "batch": "node batch-prompt.js"
+    "batch": "node batch-prompt.js",
+    "ui": "node serve.js"
   },
   "dependencies": {
+    "anentrypoint-design": "^0.0.29",
     "hydl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "^4.3.0"
   }
 }
